@@ -1,5 +1,5 @@
 PImage backgroundImg;
-PImage groundhogImg;
+PImage groundhogIdleImg;
 PImage lifeImg;
 PImage soilImg;
 PImage soldierImg;
@@ -54,7 +54,7 @@ void setup() {
 
   // images
   backgroundImg = loadImage("img/bg.jpg");
-  groundhogImg = loadImage("img/groundhog.png");
+  groundhogIdleImg = loadImage("img/groundhogIdle.png");
   lifeImg = loadImage("img/life.png");
   soilImg = loadImage("img/soil.png");
   soldierImg = loadImage("img/soldier.png");
@@ -149,7 +149,7 @@ void draw() {
       ellipse(590, 50, 120, 120);
       
       //groundhog
-      image(groundhogImg, groundhogX, groundhogY);
+      image(groundhogIdleImg, groundhogX, groundhogY);
       
       //life
       image(lifeImg, life1X, 10);
