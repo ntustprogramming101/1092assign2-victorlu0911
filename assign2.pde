@@ -1,5 +1,5 @@
 PImage backgroundImg;
-PImage groundhogIdleImg;
+PImage groundhogIdle;
 PImage lifeImg;
 PImage soilImg;
 PImage soldierImg;
@@ -54,7 +54,7 @@ void setup() {
 
   // images
   backgroundImg = loadImage("img/bg.jpg");
-  groundhogIdleImg = loadImage("img/groundhogIdle.png");
+  groundhogIdle = loadImage("img/groundhogIdle.png");
   lifeImg = loadImage("img/life.png");
   soilImg = loadImage("img/soil.png");
   soldierImg = loadImage("img/soldier.png");
@@ -149,7 +149,7 @@ void draw() {
       ellipse(590, 50, 120, 120);
       
       //groundhog
-      image(groundhogIdleImg, groundhogX, groundhogY);
+      image(groundhogIdle, groundhogX, groundhogY);
       
       //life
       image(lifeImg, life1X, 10);
@@ -175,6 +175,8 @@ void draw() {
             life1X = life1X - lifeSpace;
             groundhogX = spacing*4;
             groundhogY = spacing;
+            soldierX = 0;
+            soldierY = floor(random(2,6))*80;
           }
           
       //if groundhog eat cabbage
